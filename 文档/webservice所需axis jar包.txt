@@ -1,0 +1,11 @@
+webservice所需axis jar包
+ 
+dom4j.jar;
+axis.jar;
+axis-ant.jar;
+commons-discovery-0.2.jar;
+commons-logging-1.0.4.jar;
+dom4j-1.5.2.jar;
+jaxrpc.jar;
+saaj.jar;
+wsdl4j.jar;

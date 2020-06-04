@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:jaxws="http://cxf.apache.org/jaxws"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+	    http://cxf.apache.org/jaxws
+	    http://cxf.apache.org/schemas/jaxws.xsd">
+
+    <!--
+		address 客户端访问服务器路径
+		serviceClass 配置接口
+		serviceBean 配置实现
+	 -->
+    <!--<jaxws:server id="calcService" address="/calcService" serviceClass="com.mingoxu.ws.webservice.CalcService">
+        <jaxws:serviceBean>
+            <bean class="com.mingoxu.ws.webservice.impl.CalcServiceImpl" />
+        </jaxws:serviceBean>
+    </jaxws:server>-->
+    <!--其中id是自己定义的，implementor是接口实现类，address就是访问的地址 -->
+    <!-- 相当于Endpoint.publish("http://localhost:8080/service", newHelloServiceImp()); -->
+
+    <jaxws:endpoint id="calcService" implementor="com.mingoxu.ws.webservice.impl.CalcServiceImpl" address="/calcService"/>
+
+</beans>
