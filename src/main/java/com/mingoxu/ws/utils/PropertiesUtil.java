@@ -14,11 +14,7 @@ public class PropertiesUtil {
 
     private PropertiesUtil() {}
 
-    public static PropertiesUtil getInstance() {
-        return propertiesUtil;
-    }
-
-    public String getProperty(String key) {
+    static {
         InputStream in = PropertiesUtil.class.getClassLoader().getResourceAsStream(config);
         try {
             properties.load(in);
@@ -26,6 +22,16 @@ public class PropertiesUtil {
             logger.error(e.getMessage());
             e.printStackTrace();
         }
+    }
+
+    public static PropertiesUtil getInstance() {
+        return propertiesUtil;
+    }
+
+    public static Properties getProperties() {return properties;}
+
+    public String getProperty(String key) {
+
         return properties.getProperty(key);
     }
 }
