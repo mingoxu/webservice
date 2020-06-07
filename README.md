@@ -81,7 +81,7 @@ wsdl4j.jar;
 
 </beans>
 ```
-3. 在web.xml那配置spring监听及CXF基于web访问的servlet，项目启动
+3. 在web.xml那配置spring监听及CXF基于web访问的servlet，启动项目
 ```
 <!-- 配置加载Spring文件的监听器 -->
   <context-param>
@@ -103,4 +103,4 @@ wsdl4j.jar;
     <url-pattern>/services/*</url-pattern>
   </servlet-mapping>
 ```
-4. 项目启动好之后，访问url为；http://localhost:端口号/webservice/services/calcService?wsdl，大家可以自行用接口工具，例如SOAP进行测试
+4. 项目启动好之后，访问url为；http://localhost:端口号/webservice/services/calcService?wsdl ，大家可以自行用接口工具，例如SOAP进行测试
